@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.TextField?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.cumparaturi.HelloController">
+    <Label fx:id="welcomeText"/>
+    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+    <TableView fx:id="tableProduct"/>
+    <ListView fx:id="listProduct"/>
+    <HBox>
+        <VBox>
+            <Label fx:id="labelId">ID</Label>
+            <TextField fx:id="textFieldId"/>
+        </VBox>
+        <VBox>
+            <Label fx:id="labelMarca">Marca</Label>
+            <TextField fx:id="textFieldMarca"/>
+        </VBox>
+        <VBox>
+            <Label fx:id="labelName">Name</Label>
+            <TextField fx:id="textFieldName"/>
+        </VBox>
+        <VBox>
+            <Label fx:id="labelPrice">Price</Label>
+            <TextField fx:id="textFieldPrice"/>
+        </VBox>
+        <VBox>
+            <Label fx:id="labelQuantity">Quantity</Label>
+            <TextField fx:id="textFieldQuantity"/>
+        </VBox>
+
+
+        <Button fx:id="buttonAdd" onAction="#onAddButtonClick">Add Product</Button>
+        <HBox spacing="10.0">
+            <Button fx:id="buttonBuy" text="Buy" onAction="#onBuyButtonClick"/>
+            <Label fx:id="labelBuy" text="Total Price: 0 RON"/>
+        </HBox>
+        <Button fx:id="exitButton" onAction="#onExitButtonClick">Exit</Button>
+    </HBox>
+    <HBox spacing="10.0">
+        <Label text="Filter"/>
+        <TextField fx:id="filterTextFieldMin"/>
+        <TextField fx:id="filterTextFieldMax"/>
+        <Button fx:id="filterButton" text="Filter" onAction="#onFilterButtonClick"/>
+        <Button text="Reset" onAction="#onResetButtonClick"/>
+    </HBox>
+
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+</VBox>
